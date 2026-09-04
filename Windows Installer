@@ -1,2 +1,319 @@
-DOWNLOAD INSTALLER:
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+DOWNLOAD WINDOWS INSTALLER:
 https://drive.google.com/file/d/1XVvXgWlkPupX6w9E1lYeu9iVo5sYM8Lt/view?usp=sharing
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+
+
+# NODE Development's Clothing Studio: https://discord.gg/QrZhH9MCfd
+
+> **An all-in-one Windows development tool for creating, organizing, previewing, analyzing, optimizing, and building GTA V / FiveM clothing resources.**
+
+## 📖 Overview
+
+**NODE Development's Clothing Studio** is a Windows desktop application for FiveM developers, GTA V clothing creators, server owners, and resource developers.
+
+It brings the clothing workflow into one application:
+
+**Import → Organize → Preview → Analyze → Optimize → Build → Test**
+
+## ✨ Features
+
+### 📁 Asset Library
+Centralized management and inspection of GTA V/FiveM clothing assets.
+
+Supported file types:
+- `.ydd` — drawable/model files
+- `.ytd` — texture files
+- `.ymt` — GTA metadata-related files
+- `.meta` — resource metadata
+
+### 👕 Clothing Arranger
+Inspect and organize clothing by common GTA components:
+- Head
+- Masks
+- Hair
+- Torso
+- Legs
+- Bags
+- Shoes
+- Accessories
+- Undershirts
+- Tops
+- Armour
+- Decals
+
+### 🧍 3D Preview
+Use the Accurate Preview Host to inspect male and female clothing, drawable selections, texture selections, components, and outfit combinations before testing in FiveM.
+
+### 🔎 Clothing Analyzer
+Scan a project for:
+- YDD models
+- YTD textures
+- YMT files
+- META files
+- Drawable/texture relationships
+- Missing textures
+- Duplicate assets
+- Male/female assets
+
+Example:
+```text
+YDD MODELS:       20
+YTD TEXTURES:     20
+YMT FILES:        10
+META FILES:       10
+
+VALID PAIRS:      20
+MISSING TEXTURES: 0
+DUPLICATES:        0
+```
+
+### ⚡ Optimizer
+Inspect projects for temporary files, backups, system files, empty directories, exact duplicate binaries, large files, and general statistics.
+
+The Optimizer is designed to be safe and does not blindly delete GTA clothing assets. When possible, optimization can be performed on a separate copy.
+
+### 🛠️ Resource Builder
+Automatically creates a FiveM clothing resource.
+
+Typical output:
+```text
+YourClothingResource/
+├── fxmanifest.lua
+├── README.txt
+├── data/
+└── stream/
+    ├── male/
+    │   ├── .ydd
+    │   ├── .ytd
+    │   └── .ymt
+    └── female/
+        ├── .ydd
+        ├── .ytd
+        └── .ymt
+```
+
+Male and female assets are separated inside `stream`.
+
+### 📊 Build Progress
+The Resource Builder displays build progress, current operation, percentage, elapsed time, estimated remaining time, and build status.
+
+### 📂 Saved Output Directory
+Choose an output directory and save it for future builds.
+
+### 📂 Open Built Folder
+After a successful build, quickly open the generated resource folder. The original source folder can also be opened.
+
+## 🔄 Recommended Workflow
+
+```text
+ASSET LIBRARY
+      ↓
+CLOTHING ARRANGER
+      ↓
+3D PREVIEW
+      ↓
+ANALYZER
+      ↓
+OPTIMIZER
+      ↓
+RESOURCE BUILDER
+      ↓
+FIVE M RESOURCE
+      ↓
+IN-GAME TEST
+```
+
+## 💻 System Requirements
+
+- Windows 10 64-bit
+- Windows 11 64-bit
+- 8 GB RAM minimum
+- 16 GB+ recommended for large projects
+- SSD recommended
+- DirectX-compatible GPU
+
+## 📦 End-User Requirements
+
+For the normal self-contained installed release, users need:
+- Windows 10/11 64-bit
+- NODE Development's Clothing Studio installer
+- GTA V/FiveM clothing assets they are authorized to use
+
+Users do **not** need Visual Studio, Visual Studio Code, the .NET SDK, PowerShell, or the project source for normal application use.
+
+## 🎮 Is FiveM Required?
+
+**No.** Clothing Studio can be used independently.
+
+FiveM is needed when you want to install and test the generated resource in-game.
+
+## 📁 Supported Asset Types
+
+Common supported files:
+```text
+.ydd
+.ytd
+.ymt
+.meta
+```
+
+Different clothing packs can use different naming conventions, metadata structures, and dependencies.
+
+# 🚀 User Tutorial
+
+### 1. Install Clothing Studio
+Download `NodeDevelopment_ClothingTool_Setup.exe`, run it, follow the installer, and launch **NODE Development's Clothing Studio**.
+
+### 2. Create or Open a Project
+Create a new project or open an existing clothing project and select the folder containing your GTA V/FiveM assets.
+
+### 3. Check Asset Library
+Open **Asset Library** and verify that the expected YDD, YTD, YMT, and META files are detected.
+
+### 4. Organize Clothing
+Open **Clothing Arranger** and inspect clothing by gender, component, drawable, and texture.
+
+### 5. Preview Clothing
+Open **3D Preview**, select the appropriate gender/component/drawable/texture, and inspect the item.
+
+### 6. Analyze the Project
+Open **Analyzer** and run the analysis. Review valid pairs, missing textures, duplicates, and other reported issues.
+
+### 7. Optimize
+Open **Optimizer**, review its findings, and use an optimized copy when appropriate. Keep your original source backed up.
+
+### 8. Configure Output
+Open **Resource Builder**, choose an output directory, and save it as the default if desired.
+
+### 9. Build the Resource
+Enter a resource name such as:
+```text
+node_custom_clothing
+```
+Click **BUILD RESOURCE** and monitor the progress.
+
+### 10. Open the Generated Resource
+Click **OPEN BUILT FOLDER** after the build completes.
+
+### 11. Install on FiveM
+Copy the generated resource into your server's `resources` directory and add it to your server configuration:
+```cfg
+ensure node_custom_clothing
+```
+
+### 12. Test In-Game
+Restart/start the server and test male/female clothing, drawable IDs, texture IDs, components, metadata, and resource behavior.
+
+## 🔐 Asset & Copyright Notice
+
+NODE Development's Clothing Studio is a development and organization tool.
+
+Users are responsible for the assets they import, modify, and distribute. Only use assets you created, purchased legitimately, or have permission to modify and distribute.
+
+Do not redistribute copyrighted or protected clothing without authorization.
+
+## 🛡️ Backup Recommendation
+
+Always keep an original backup:
+```text
+ORIGINAL SOURCE
+      │
+      ├── BACKUP
+      │
+      └── WORKING COPY
+              ↓
+          OPTIMIZER
+              ↓
+       RESOURCE BUILDER
+```
+
+## ⚠️ Limitations
+
+Clothing Studio does not guarantee automatic repair of every possible clothing pack. Manual work may still be required for corrupted files, invalid GTA assets, incorrect metadata, unsupported naming conventions, missing dependencies, broken resource structures, or invalid drawable/texture relationships.
+
+## ❓ FAQ
+
+**Do I need FiveM installed?**  
+No. FiveM is needed only for in-game testing.
+
+**Do I need GTA V installed?**  
+Not necessarily for basic organization, analysis, optimization, and resource building. A GTA V/FiveM test environment is recommended for final validation.
+
+**Do I need Visual Studio?**  
+No for normal users.
+
+**Do I need the .NET SDK?**  
+No for the self-contained end-user release.
+
+**Can I use male and female clothing?**  
+Yes. The Resource Builder separates them into `stream/male/` and `stream/female/`.
+
+**Can I choose where the generated resource goes?**  
+Yes. The output directory can be saved for future builds.
+
+## 🗺️ Roadmap
+
+Future development may include:
+- More advanced GTA V preview functionality
+- Expanded clothing format support
+- Advanced texture optimization
+- Expanded resource validation
+- Advanced outfit management
+- Project templates
+- Additional export options
+- More automation
+- Additional FiveM development utilities
+
+## 🤝 Contributing
+
+Bug reports, feature suggestions, and testing feedback are welcome.
+
+When reporting a bug, include:
+1. Clothing Studio version
+2. Windows version
+3. Feature involved
+4. Steps to reproduce
+5. Expected result
+6. Actual result
+7. Error message/log
+8. Screenshots when useful
+
+Do not upload copyrighted or private clothing assets unless you have permission to share them.
+
+## 🏷️ Project Information
+
+| Property | Value |
+|---|---|
+| Product | NODE Development's Clothing Studio |
+| Developer | NODE Development |
+| Version | v0.4.2 |
+| Platform | Windows |
+| Architecture | x64 |
+| Target Ecosystem | GTA V / FiveM |
+| Application Type | Windows Desktop Application |
+
+## ❤️ Credits
+
+Developed by **NODE Development: https://discord.gg/QrZhH9MCfd**.
+
+Built for the GTA V / FiveM development community.
+
+## ⭐ Support the Project
+
+If Clothing Studio is useful to you:
+- ⭐ Star the repository
+- 🐛 Report bugs
+- 💡 Suggest features
+- 📢 Share the project
+- 🧪 Help test new releases
+
+---
+
+> **Your clothing workflow. One application.**
+
+**Organize. Preview. Analyze. Optimize. Build. Test.**
